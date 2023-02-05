@@ -25,7 +25,7 @@
 		"access": "public"
 	},
 	"scripts": {
-		"compile": "node ./bin/build-lit-ts-config && tsc --project tmp/tsconfig.lit-reactive-element.json && tsc --project tmp/tsconfig.lit-element.json && tsc --project tmp/tsconfig.lit-html.json && tsc --project tmp/tsconfig.lit.json && node ./bin/transform-lit-require.js && node ./bin/copy-tsdef-for-lit.js && node ./bin/copy-package-json-for-lit.js && tsc",
+		"compile": "node ./bin/build-lit-ts-config && tswc --tsconfig tmp/tsconfig.lit-reactive-element.json && tswc --tsconfig tmp/tsconfig.lit-element.json && tswc --tsconfig tmp/tsconfig.lit-html.json && tswc --tsconfig tmp/tsconfig.lit.json && node ./bin/transform-lit-require.js && node ./bin/copy-tsdef-for-lit.js && node ./bin/copy-package-json-for-lit.js && tsc",
 		"watch": "npm run compile && tsc -w --preserveWatchOutput",
 		"lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
 		"lint:fix": "eslint --ignore-path .gitignore --max-warnings 0 --fix .",
